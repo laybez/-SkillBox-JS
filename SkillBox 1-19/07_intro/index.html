@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поиск минимального и максимального числа</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        button {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Поиск минимального и максимального числа</h1>
+<p class="all-elements"></p>
+<button class="min">Найти минимальное число</button>
+<button class="max">Найти максимальное число</button>
+<p>Минимальное число: <span class="minNumber"></span></p>
+<p>Максимальное число: <span class="maxNumber"></span></p>
+
+<script>
+// Исходный массив чисел
+const numbers = [5, 12, 3, 8, 20, 1, 15];
+
+// Отображаем все элементы массива
+const allElements = document.querySelector('.all-elements');
+let elementsText = '';
+for (let i = 0; i < numbers.length; i++) {
+    elementsText += numbers[i];
+    if (i < numbers.length - 1) {
+        elementsText += ', '; // Добавляем запятую между элементами
+    }
+}
+allElements.textContent = elementsText;
+
+// Функция для нахождения минимального числа
+function findMin() {
+    let minNumber = numbers[0]; // Начинаем с первого элемента
+    for (let i = 1; i < numbers.length; i++) {
+        if (numbers[i] < minNumber) {
+            minNumber = numbers[i];
+        }
+    }
+    document.querySelector('.minNumber').textContent = minNumber; // Отображаем минимальное число
+}
+
+// Функция для нахождения максимального числа
+function findMax() {
+    let maxNumber = numbers[0]; // Начинаем с первого элемента
+    for (let i = 1; i < numbers.length; i++) {
+        if (numbers[i] > maxNumber) {
+            maxNumber = numbers[i];
+        }
+    }
+    document.querySelector('.maxNumber').textContent = maxNumber; // Отображаем максимальное число
+}
+
+// Привязываем функции к кнопкам
+document.querySelector('.min').addEventListener('click', findMin);
+document.querySelector('.max').addEventListener('click', findMax);
+</script>
+
+</body>
+</html>

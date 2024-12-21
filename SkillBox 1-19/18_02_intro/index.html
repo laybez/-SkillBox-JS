@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress Bar Animation</title>
+    <style>
+        #progress-container {
+            width: 500px;
+            background-color: #f3f3f3;
+            border: 1px solid #ccc;
+            margin: 20px 0;
+            overflow: hidden; /* Скрываем переполнение */
+        }
+        #progress-bar {
+            height: 20px;
+            background-color: #4caf50;
+            width: 0;
+            transform-origin: left; /* Устанавливаем точку начала анимации */
+            transition: transform 1s ease; /* Плавная анимация */
+        }
+        #timer {
+            font-size: 20px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Progress Bar Animation</h1>
+    <div id="progress-container">
+        <div id="progress-bar"></div>
+    </div>
+    <div id="timer">0</div>
+    <button onclick="startProgress(5)">Начать анимацию на 5 секунд</button>
+    <script src="script.js"></script>
+</body>
+</html>

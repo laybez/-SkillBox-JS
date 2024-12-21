@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Подсчет гласных букв</title>
+</head>
+<body>
+    <script>
+        // Функция для подсчёта гласных букв в слове
+        const countVowels = (word) => {
+            // Определяем массив гласных букв
+            const vowels = ['a', 'e', 'i', 'o', 'u', 'а', 'е', 'ё', 'и', 'о', 'у', 'ы', 'э', 'ю', 'я']; 
+            // Приводим слово к нижнему регистру для удобства сравнения
+            const lowerCaseWord = word.toLowerCase(); 
+
+            // Используем метод filter() для фильтрации гласных букв
+            const vowelCount = lowerCaseWord.split('').filter(letter => vowels.includes(letter)).length;
+
+            // Возвращаем количество гласных букв
+            return vowelCount;
+        };
+
+        // Пример использования функции
+        const word = 'JavaScript';
+        const vowelCount = countVowels(word);
+        console.log(vowelCount); // Выведет 3
+    </script>
+</body>
+</html>

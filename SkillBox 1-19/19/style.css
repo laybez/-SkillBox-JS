@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+#deliveryList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.delivery-card {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px;
+    width: 250px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+p {
+    margin: 5px 0;
+    font-weight: bold; /* Сделаем текст жирным для заголовков */
+}
+
+.value {
+    font-weight: normal; /* Обычный вес шрифта для значений */
+    font-style: italic; /* Курсив для значений */
+}

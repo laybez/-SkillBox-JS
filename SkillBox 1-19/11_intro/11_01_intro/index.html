@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Опросник</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Форма опроса</h1>
+        <form id="surveyForm">
+            <div class="form-group">
+                <label for="username">Имя пользователя:</label>
+                <input type="text" id="username" required>
+                <span class="error-message" id="usernameError"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+                <span class="error-message" id="emailError"></span>
+            </div>
+
+            <div class="form-group">
+                <label>Пол:</label>
+                <label><input type="radio" name="gender" value="Мужской" required> Мужской</label>
+                <label><input type="radio" name="gender" value="Женский"> Женский</label>
+            </div>
+
+            <div class="form-group">
+                <label for="rating">Оценка сервиса:</label>
+                <input type="range" id="rating" min="1" max="10" value="5">
+                <span id="ratingValue">5</span>
+            </div>
+
+            <div class="form-group">
+                <label>Интересы:</label>
+                <label><input type="checkbox" name="interests" value="Спорт"> Спорт</label>
+                <label><input type="checkbox" name="interests" value="Музыка"> Музыка</label>
+                <label><input type="checkbox" name="interests" value="Путешествия"> Путешествия</label>
+                <label><input type="checkbox" name="interests" value="Кино"> Кино</label>
+            </div>
+
+            <div class="form-group">
+                <label for="comments">Дополнительные комментарии:</label>
+                <textarea id="comments"></textarea>
+            </div>
+
+            <button type="submit">Отправить</button>
+        </form>
+
+        <div id="result" class="result"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

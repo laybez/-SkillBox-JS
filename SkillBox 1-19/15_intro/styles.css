@@ -1,0 +1,10 @@
+/* Добавьте стили для новых элементов, если требуется */
+input[type="text"], input[type="number"] {
+    margin: 5px 0;
+    padding: 10px;
+    width: calc(100% - 22px);
+}
+
+button {
+    margin: 5px 0;
+}

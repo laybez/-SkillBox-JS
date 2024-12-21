@@ -1,0 +1,10 @@
+function hello() {
+  console.log('Skill');
+}
+
+try { 
+  hello(); // Исправлено: заменено helo() на hello()
+} catch (error) {
+  console.error('Произошла ошибка:', error); // Выводим информацию об ошибке в консоль
+}
+console.log('complete');

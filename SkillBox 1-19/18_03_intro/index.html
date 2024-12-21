@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Загрузка изображений с прогресс-баром</title>
+    <style>
+        #progress-container {
+            width: 500px;
+            background-color: #f3f3f3;
+            border: 1px solid #ccc;
+            margin: 20px 0;
+            overflow: hidden;
+        }
+        .progress-bar {
+            height: 20px;
+            background-color: #4caf50;
+            width: 0;
+            transition: width 1s ease;
+        }
+        img {
+            max-width: 200px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Загрузка изображений с прогресс-баром</h1>
+    <div id="progress-container-1">
+        <div class="progress-bar" id="progress-bar-1"></div>
+    </div>
+    <div id="images-container-1"></div>
+
+    <div id="progress-container-2">
+        <div class="progress-bar" id="progress-bar-2"></div>
+    </div>
+    <div id="images-container-2"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
